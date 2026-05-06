@@ -19,16 +19,16 @@ A organizacao das pastas foi pensada para garantir a separacao de preocupacoes e
 ## Instrucoes de Instalacao e Execucao
 
 1. Clone o repositorio:
-'''bash
+''' bash
 git clone [https://github.com/KaiellySousa/Projeto_TESTE_e_QUALIDADE.git]
 cd PROJETO_AUTOMACAO
 
 3. Instale as dependencias:
-'''bash
+''' bash
 pip install -r requirements.txt''
 
 5. Execute todos os testes:
-'''bash
+''' bash
 python -m pytest''
 
 ## Metodologia e Padroes Aplicados
