@@ -5,49 +5,53 @@ Este projeto apresenta a automacao de testes para a API Swagger Petstore e para 
 ## Estrutura do Projeto
 
 A organizacao das pastas foi pensada para garantir a separacao de preocupacoes e facilitar a manutencao do codigo:
+<img width="243" height="497" alt="image" src="https://github.com/user-attachments/assets/e301c750-a610-43db-ba7b-2ba3eddedc2a" />
 
-<img width="235" height="457" alt="image" src="https://github.com/user-attachments/assets/c232c16e-4f64-4ed5-87e0-ea9d48595635" />
 
 ## Tecnologias Utilizadas
 
-* Linguagem: Python
-* Framework de Testes: Pytest
-* Automacao Web: Selenium WebDriver
-* Automacao de API: Requests library
-* CI/CD: GitHub Actions
+* **Linguagem**: Python
+* **Framework de Testes**: Pytest
+* **Automacao Web**: Selenium WebDriver
+* **Automacao de API**: Requests library
+* **CI/CD**: GitHub Actions
 
 ## Instrucoes de Instalacao e Execucao
 
-1. Clone o repositorio:
-git clone [https://github.com/KaiellySousa/Projeto_TESTE_e_QUALIDADE.git]
+1. **Clone o repositorio**:
+```bash
+git clone https://github.com/KaiellySousa/Projeto_TESTE_e_QUALIDADE.git
 cd PROJETO_AUTOMACAO
+```
 
-3. Instale as dependencias:
+2. **Instale as dependencias**:
+```bash
+pip install -r requirements.txt
+```
 
-pip install -r requirements.txt''
-
-5. Execute todos os testes:
-
-python -m pytest''
+3. **Execute todos os testes**:
+```bash
+python -m pytest
+```
 
 ## Metodologia e Padroes Aplicados
 
 ### Page Objects (POM)
-Na automacao web, foi aplicado o padrao Page Objects dentro do diretorio web/pages/. Esta abordagem isola a estrutura das paginas da logica de teste, permitindo que alteracoes no layout do site exijam mudancas apenas na classe da pagina, sem afetar os scripts de teste principais.
+Na automacao web, foi aplicado o padrao Page Objects dentro do diretorio `web/pages/`. Esta abordagem isola a estrutura das paginas da logica de teste, facilitando a manutencao caso ocorram mudancas no layout do site.
 
 ### Integracao Continua (CI)
-O projeto conta com uma pipeline configurada via GitHub Actions no arquivo pipeline.yml. A cada commit realizado no repositorio, a pipeline e acionada para configurar o ambiente Python, instalar as dependencias e executar a suite de testes completa de forma automatizada.
+O projeto conta com uma pipeline configurada via GitHub Actions no arquivo `pipeline.yml`. A cada commit, a pipeline e acionada para configurar o ambiente, instalar dependencias e executar a suite de testes de forma automatizada.
 
 ### Configuracao de Ambiente
-Para a execucao na pipeline, o Selenium foi configurado em modo Headless (sem interface grafica) utilizando os argumentos --no-sandbox e --disable-dev-shm-usage. Isso garante que os testes de interface rodem corretamente em servidores de integracao continua.
+Para a execucao na pipeline, o Selenium foi configurado em modo **Headless** (sem interface grafica). Isso garante que os testes de interface rodem corretamente em servidores de integracao continua.
 
 ## Cobertura de Testes
 
-1. API Petstore:
-* Teste de CRUD completo para Pets.
-* Criacao e validacao de pedidos na Store.
-* Gerenciamento e consulta de Usuarios.
-* Validacao de cenario negativo (ID inexistente).
+1. **API Petstore**:
+    * Teste de CRUD completo para Pets.
+    * Criacao e validacao de pedidos na Store.
+    * Gerenciamento e consulta de Usuarios.
+    * Validacao de cenario negativo (ID inexistente).
 
-2. Web SauceDemo:
-* Fluxo E2E completo: Login, adicao de produto ao carrinho, preenchimento de dados de entrega e finalizacao da compra com validacao da mensagem de sucesso.
+2. **Web SauceDemo**:
+    * Fluxo E2E completo: Login, adicao de produto ao carrinho, preenchimento de dados de entrega e finalizacao da compra com validacao da mensagem de sucesso.
