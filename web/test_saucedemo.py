@@ -14,9 +14,10 @@ def navegador():
     opcoes.add_argument("--headless")
     opcoes.add_argument("--no-sandbox")
     opcoes.add_argument("--disable-dev-shm-usage")
+    opcoes.add_argument("--window-size=1920,1080")
 
     driver = webdriver.Chrome(options=opcoes)
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(15)
     yield driver
     driver.quit()
 
@@ -29,5 +30,5 @@ def test_fluxo_compra(navegador):
     pagina.preencher_informacoes_e_finalizar("Kaielly", "Sousa", "64000-000")
 
     texto_confirmacao = navegador.find_element(By.CLASS_NAME, "complete-header").text
-    # Asserção exata conforme o site
+
     assert "Thank you for your order!" in texto_confirmacao
