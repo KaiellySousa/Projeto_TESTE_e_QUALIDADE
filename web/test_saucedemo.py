@@ -14,9 +14,11 @@ def navegador():
     opcoes.add_argument("--no-sandbox")
     opcoes.add_argument("--disable-dev-shm-usage")
     opcoes.add_argument("--window-size=1920,1080")
+    opcoes.add_argument("--disable-gpu")
+    opcoes.add_argument("--ignore-certificate-errors")
 
     driver = webdriver.Chrome(options=opcoes)
-    driver.implicitly_wait(15)
+    driver.implicitly_wait(20)
     yield driver
     driver.quit()
 
