@@ -5,19 +5,8 @@ Este projeto apresenta a automacao de testes para a API Swagger Petstore e para 
 ## Estrutura do Projeto
 
 A organizacao das pastas foi pensada para garantir a separacao de preocupacoes e facilitar a manutencao do codigo:
-''
-PROJETO_AUTOMACAO/
-├── .github/workflows/    # Configuracao da Pipeline de CI
-│   └── pipeline.yml      # Execucao automatica dos testes no GitHub
-├── api/                  # Testes de API
-│   └── test_petstore.py  # Cobertura de endpoints (User, Store e Pet)
-├── web/                  # Testes de Interface Web
-│   ├── pages/            # Implementacao do padrao Page Objects
-│   │   └── saucedemo_pages.py
-│   └── test_saucedemo.py # Fluxo funcional ponta a ponta (E2E)
-├── .gitignore            # Arquivos ignorados pelo controle de versao
-└── requirements.txt      # Dependencias do projeto (Selenium, Pytest, Requests)
-''
+
+<img width="235" height="457" alt="image" src="https://github.com/user-attachments/assets/c232c16e-4f64-4ed5-87e0-ea9d48595635" />
 
 ## Tecnologias Utilizadas
 
@@ -30,14 +19,14 @@ PROJETO_AUTOMACAO/
 ## Instrucoes de Instalacao e Execucao
 
 1. Clone o repositorio:
-''git clone [https://github.com/KaiellySousa/Projeto_TESTE_e_QUALIDADE.git]
-cd PROJETO_AUTOMACAO''
+'''git clone [https://github.com/KaiellySousa/Projeto_TESTE_e_QUALIDADE.git]
+cd PROJETO_AUTOMACAO
 
 2. Instale as dependencias:
-''pip install -r requirements.txt''
+'''pip install -r requirements.txt''
 
 3. Execute todos os testes:
-''python -m pytest''
+'''python -m pytest''
 
 ## Metodologia e Padroes Aplicados
 
